@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}New Recommendation{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    <label for="recommendee2">Send to:</label>
+    <input name="recommendee1" id="recommendee2" value="{{ request.form['recommendee3'] }}" required>
+    <label for="link">Link</label>
+    <input name="link" id="link" value="{{ request.form['link'] }}" required>
+    <label for="message">Message</label>
+    <textarea name="message" id="message">{{ request.form['message'] }}</textarea>
+    <input type="submit" value="Save">
+  </form>
+{% endblock %}
